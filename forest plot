@@ -1,10 +1,14 @@
 // in progress
+# in progress
 
 // this script is specifically to make a forest plot
 // forest plot is a graphical chart used in research to display results of multiple studies addressing the same question
 // you can use the {meta}, {metafor} or {metaviz} packages in R to make these plots
+# forest plot is a graphical chart used in research to display results of multiple studies addressing the same question
+# you can use the {meta}, {metafor} or {metaviz} packages in R to make these plots
 
 // install and call the necessary libraries
+# install and call the necessary libraries
 install.packages("ggplot2")
 install.packages("metafor")
 library(ggplot2)
