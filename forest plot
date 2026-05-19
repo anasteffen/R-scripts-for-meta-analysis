@@ -14,8 +14,12 @@ library(meta)
 
 
 # upload the database
+# be careful of what kind of archive you are using because they can have different separators like ',' or ';' 
 tab_colesterol <- read.csv2("C:/Users/anajs/Desktop/colesterol_levels.CSV")
 
+
+# metacont is a function from the {meta} package
+# description of metacont from documentation: Calculation of common and random effects estimates for meta-analyses with continuous outcome data; inverse variance weighting is used for pooling.
 
 m.cont <- metacont(n.e = n.e,
             mean.e = mean.e,
