@@ -14,7 +14,7 @@ library(meta)
 
 
 # upload the database
-# be careful of what kind of archive you are using because they can have different separators like ',' or ';' 
+# be careful of what type of file you are using because they can have different separators like ',' or ';' 
 tab_colesterol <- read.csv2("C:/Users/anajs/Desktop/colesterol_levels.CSV")
 
 
