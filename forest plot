@@ -7,8 +7,11 @@
 # install and call the necessary libraries
 install.packages("ggplot2")
 install.packages("metafor")
+install.packages("meta")
 library(ggplot2)
 library(metafor)
+library(meta)
+
 
 # upload the database
 tab_colesterol <- read.csv2("C:/Users/anajs/Desktop/colesterol_levels.CSV")
