@@ -10,4 +10,30 @@ install.packages("metafor")
 library(ggplot2)
 library(metafor)
 
+# upload the database
+tab_colesterol <- read.csv2("C:/Users/anajs/Desktop/colesterol_levels.CSV")
 
+
+m.cont <- metacont(n.e = n.e,
+            mean.e = mean.e,
+            sd.e = sd.e,
+            n.c = n.c,
+            mean.c = mean.c,
+            sd.c = sd.c,
+            studlab = studlab,
+            data = tab_colesterol,
+            sm = "SMD",
+            method.smd = "Hedges",
+            fixed = FALSE,
+            random = TRUE,
+            method.tau = "REML",
+            method.random.ci = "HK",
+            title = "cholesterol levels")
+
+summary(m.cont)
+
+# forest plot
+forest (
+  m.cont,
+  xlab = "Standardized Mean Difference"
+)
