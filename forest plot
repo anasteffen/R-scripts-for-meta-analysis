@@ -5,6 +5,7 @@
 # you can use the {meta}, {metafor} or {metaviz} packages in R to make these plots
 
 # install and call the necessary libraries
+# if you already have the packages installed you dont need to run the install.packages everytime, just the library()
 install.packages("ggplot2")
 install.packages("metafor")
 install.packages("meta")
@@ -20,6 +21,8 @@ tab_colesterol <- read.csv2("C:/Users/anajs/Desktop/colesterol_levels.CSV")
 
 # metacont is a function from the {meta} package
 # description of metacont from documentation: Calculation of common and random effects estimates for meta-analyses with continuous outcome data; inverse variance weighting is used for pooling.
+
+# when choosing sm, you could use SDM or not. if the results are all in the same unit, you don't have to use SDM
 
 m.cont <- metacont(n.e = n.e,
             mean.e = mean.e,
@@ -42,5 +45,9 @@ summary(m.cont)
 # forest plot
 forest (
   m.cont,
-  xlab = "Standardized Mean Difference"
+  xlab = "Standardized Mean Difference",
+  sortvar = TE,
+  prediction = TRUE,
+  print.tau2 = TRUE,
+  print.I2 = TRUE
 )
