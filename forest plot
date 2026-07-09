@@ -16,7 +16,7 @@ library(meta)
 
 # upload the database
 # be careful of what type of file you are using because they can have different separators like ',' or ';' 
-tab_colesterol <- read.csv2("C:/Users/anajs/Desktop/colesterol_levels.CSV")
+tab_colesterol <- read.csv2(" ~ directory of the file ~ ")
 
 
 # metacont is a function from the {meta} package
